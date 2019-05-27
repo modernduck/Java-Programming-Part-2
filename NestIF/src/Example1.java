@@ -23,9 +23,19 @@ public class Example1 {
 				tax = 30;
 			}
 		}else if(age < 80) {
-			
+			if(salary < 300000) {
+				tax = 0;
+			}else if( salary < 500000) {
+				tax = 5;
+			}else {
+				tax = 10;
+			}
 		}else {
-			
+			if(salary < 500000) {
+				tax = 0;
+			}else {
+				tax = 3;
+			}
 		}
 		System.out.println("Your tax is " + tax + " %");
 	}
