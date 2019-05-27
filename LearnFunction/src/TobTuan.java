@@ -30,6 +30,12 @@ public class TobTuan {
 		return min2;
 	}
 	
+	public static int findMaxAdvance(int a, int b ,int c) {
+		int max1 = Math.max(a, b);
+		int max2 = Math.max(max1, c);
+		return max2;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner number = new Scanner(System.in);
@@ -41,7 +47,8 @@ public class TobTuan {
 		int thirdInput = number.nextInt();
 		
 		int min = findMinAdvance(firstInput, secondInput, thirdInput);
-		System.out.print("Min number is " + min);
+		int max = findMaxAdvance(firstInput, secondInput, thirdInput);
+		System.out.print("Min number is " + min + " max number is " + max);
 		
 	}
 
