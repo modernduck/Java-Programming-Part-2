@@ -36,6 +36,10 @@ public class TobTuan {
 		return max2;
 	}
 	
+	public static int power2(int base) {
+		return base * base;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner number = new Scanner(System.in);
@@ -48,8 +52,11 @@ public class TobTuan {
 		
 		int min = findMinAdvance(firstInput, secondInput, thirdInput);
 		int max = findMaxAdvance(firstInput, secondInput, thirdInput);
-		System.out.print("Min number is " + min + " max number is " + max);
-		
+		System.out.println("Min number is " + min + " max number is " + max);
+		System.out.print("Demonstrate power2() what's base number?:");
+		int inputBase = number.nextInt();
+		int answer = power2(inputBase);
+		System.out.print("power2(" + inputBase + ") is " + answer);
 	}
 
 }
