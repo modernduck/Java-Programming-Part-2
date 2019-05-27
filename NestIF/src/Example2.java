@@ -40,6 +40,7 @@ public class Example2 {
 			}
 				
 		}
+		System.out.println("YOU GOT COMMISSION " + comission + " %");
 	}
 
 }
