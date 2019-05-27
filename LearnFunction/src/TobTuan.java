@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 public class TobTuan {
 
 	public static int findMin(int a, int b, int c) {
@@ -23,6 +24,12 @@ public class TobTuan {
 		}
 	}
 	
+	public static int findMinAdvance(int a, int b, int c) {
+		int min1 = Math.min(a, b);
+		int min2 = Math.min(min1, c);
+		return min2;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner number = new Scanner(System.in);
@@ -33,7 +40,7 @@ public class TobTuan {
 		System.out.print("Third number?:");
 		int thirdInput = number.nextInt();
 		
-		int min = findMin(firstInput, secondInput, thirdInput);
+		int min = findMinAdvance(firstInput, secondInput, thirdInput);
 		System.out.print("Min number is " + min);
 		
 	}
