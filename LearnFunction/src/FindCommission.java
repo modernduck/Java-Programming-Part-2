@@ -5,7 +5,6 @@ public class FindCommission {
 		double result;
 		if(a <= 4) {
 			//JAN - APRIL
-			
 			if(maia < 3000) {
 				result = 3;
 			}else if(maia < 6000) {
@@ -52,7 +51,8 @@ public class FindCommission {
 		double sales = number.nextDouble();
 		double comissionPercent = getPercentComission(month, sales);
 		System.out.println("Your comission is " + comissionPercent + " %");
-
+		System.out.println("Which is " + (comissionPercent * sales / 100));
+		
 	}
 
 }
