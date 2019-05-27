@@ -3,15 +3,38 @@ public class FindTax {
 
 	
 	public static int getTax(int age, int salary) {
-		
-		
-		
-		return -1;
+		int tax = -1;
+		if(age < 60) {
+			if(salary < 250000) {
+				tax = 0;
+			}else if( salary < 500000) {
+				tax = 10;
+			}else if( salary < 1000000) {
+				tax = 20;
+			}else {
+				tax = 30;
+			}
+		}else if(age < 80) {
+			if(salary < 300000) {
+				tax = 0;
+			}else if( salary < 500000) {
+				tax = 5;
+			}else {
+				tax = 10;
+			}
+		}else {
+			if(salary < 500000) {
+				tax = 0;
+			}else {
+				tax = 3;
+			}
+		}
+		return tax;
 	}
 	
-	public static int calculateTax(int tax, int salary) {
+	public static double calculateTax(int tax, int salary) {
 		
-		return -2;
+		return tax / 100.0 * salary;
 	}
 	
 	public static void main(String[] args) {
@@ -23,7 +46,7 @@ public class FindTax {
 		int salary = number.nextInt();
 		//kumnuan
 		int tax = getTax(age, salary);
-		int cost = calculateTax(tax, salary);
+		double cost = calculateTax(tax, salary);
 		//output
 		System.out.println("Your tax is " + tax + "% so you have to pay " + cost + " THB"); 
 	}
